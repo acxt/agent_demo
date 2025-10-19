@@ -1,0 +1,25 @@
+# Copy this file to .env and fill in your API keys
+
+# API Keys
+DEEPSEEK_API_KEY=your_deepseek_key_here
+GEMINI_API_KEYS=key1,key2,key3
+VEO_API_KEY=your_veo_key_here
+
+# Bilibili
+BILI_COOKIE=your_bilibili_cookie_here
+
+# Server Configuration
+API_HOST=127.0.0.1
+API_PORT=8000
+DEBUG=true
+
+# Proxy Settings (optional)
+HTTP_PROXY=
+HTTPS_PROXY=
+
+# Paths
+DATA_DIR=./data
+PROMPTS_DIR=./data/prompts
+VIDEOS_DIR=./data/videos
+LOGS_DIR=./logs
+

@@ -1,0 +1,72 @@
+# Application Settings
+app:
+  name: "VideoAgent"
+  version: "1.0.0"
+  debug: true
+
+# Server Configuration
+server:
+  host: "127.0.0.1"
+  port: 8000
+  reload: true
+
+# LLM Configuration
+llm:
+  default_provider: "gemini"
+  temperature: 0
+  max_tokens: 4096
+
+  providers:
+    gemini:
+      models:
+        - "gemini-2.0-flash-exp"
+        - "gemini-2.5-flash"
+        - "gemini-2.5-pro"
+      default_model: "gemini-2.0-flash-exp"
+
+    deepseek:
+      models:
+        - "deepseek-chat"
+        - "deepseek-reasoner"
+      default_model: "deepseek-chat"
+
+# Hotspot Configuration
+hotspot:
+  keywords:
+    - "AI"
+    - "technology"
+    - "tutorial"
+  lookback_days: 7
+  top_k: 10
+
+  score_weights:
+    views: 0.1
+    likes: 1.0
+    comments: 0.8
+    danmaku: 0.5
+    gravity: 1.8
+    duration_weight: 0.25
+
+# Video Processing
+video:
+  max_size_mb: 500
+  supported_formats:
+    - "mp4"
+    - "webm"
+    - "mkv"
+  download_timeout: 600
+
+# Task Management
+tasks:
+  max_concurrent: 5
+  max_retries: 2
+  retry_delay: 3
+  cleanup_interval: 3600
+  history_size: 100
+
+# Paths
+paths:
+  data: "./data"
+  prompts: "./data/prompts"
+  videos: "./data/videos"
+  logs: "./logs"
